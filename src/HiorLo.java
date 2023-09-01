@@ -11,12 +11,11 @@ public class HiorLo {
         Boolean even;
         System.out.println("Welcome to guess a number!");
         System.out.println("Guess a number between 1 and 10");
+        System.out.println("For each guess your score will increase by 1 \nYou only have 3 guesses to guess the number");
         targetNumber = random.nextInt(10 + 1);
 
 
-
-
-        while (score<3) {    //maximum of 3 guesses. The program will stop after 3 incorrect guesses
+        while (score < 3) {    //maximum of 3 guesses. The program will stop after 3 incorrect guesses
 
             userGuess = in.nextInt();
             in.nextLine(); //scanner bug
@@ -28,32 +27,29 @@ public class HiorLo {
                 System.out.println("Lower!");
                 score++;
                 System.out.println("Your current score is " + score);
-            }
-            else {
+            } else {
                 System.out.println("You've guessed the number!");
 
-                targetNumber = random.nextInt(10) + 1;
-
-            break;
+                break;
 
             }
-            if (score==3 ) {   //if the player reaches a score of 3, the program will end.
-                System.out.println("Youve run out of guesses! Try again");
+            if (score == 3) {   //if the player reaches a score of 3, the program will end.
+                System.out.println("Youve run out of guesses! Better luck next time :)");
                 System.out.println("The correct number is: " + targetNumber);
             }
-            if (score==2) {
-                 if (targetNumber % 2 == 0) {  // means the number is even
+            if (score == 2) {
+                if (targetNumber % 2 == 0) {  // means the number is even
 
                     System.out.println("Hint: The number is even");
                 } else {
                     System.out.println("Hint: The number is odd");  // if not even, must be odd
                 }
             }
-            }
-
-            }
-
-
         }
+
+    }
+
+
+}
 
 
