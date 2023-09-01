@@ -22,7 +22,7 @@ public class HiorLo {
             in.nextLine(); //scanner bug
             if (userGuess < targetNumber) {
                 System.out.println("Higher!");
-                score++;
+                score++;                        // ++ adds 1 to the score
                 System.out.println("Your current score is " + score);
             } else if (userGuess > targetNumber) {
                 System.out.println("Lower!");
@@ -37,7 +37,7 @@ public class HiorLo {
             break;
 
             }
-            if (score==3 ) {   //if the player uses all guesses, the program will end.
+            if (score==3 ) {   //if the player reaches a score of 3, the program will end.
                 System.out.println("Youve run out of guesses! Try again");
                 System.out.println("The correct number is: " + targetNumber);
             }
